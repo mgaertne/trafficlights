@@ -6,11 +6,14 @@ public class FirstLightSwitchingCrossingController {
 
 	private LightState firstState;
 	
+	private LightState secondState;
+	
 	public void setFirstLight(LightState state) {
-		this.firstState = state;
+		firstState = state;
 	}
 
 	public void setSecondLight(LightState state) {
+		secondState = state;
 	}
 	
 	public LightState firstLight() {
@@ -18,6 +21,6 @@ public class FirstLightSwitchingCrossingController {
 	}
 	
 	public LightState secondLight() {
-		return LightState.RED;
+		return secondState;
 	}
 }

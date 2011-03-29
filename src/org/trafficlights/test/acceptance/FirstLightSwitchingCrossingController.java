@@ -18,8 +18,7 @@ public class FirstLightSwitchingCrossingController {
 	
 	public void execute() {
 		if (!isValidLightStateConfiguration()) {
-			firstState = LightState.UNKNOWN;
-			secondState = LightState.UNKNOWN;
+			warningConfiguration();
 			return;
 		}
 		firstState = firstState.next();
@@ -27,6 +26,11 @@ public class FirstLightSwitchingCrossingController {
 
 	private boolean isValidLightStateConfiguration() {
 		return LightState.RED.equals(secondState);
+	}
+	
+	private void warningConfiguration() {
+		firstState = LightState.UNKNOWN;
+		secondState = LightState.UNKNOWN;
 	}
 	
 	public LightState firstLight() {

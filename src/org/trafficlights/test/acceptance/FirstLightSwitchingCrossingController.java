@@ -21,14 +21,14 @@ public class FirstLightSwitchingCrossingController {
 	}
 
 	public void switchFirstLight() {
-		if (!isValidLightStateConfiguration(firstState, secondState)) {
+		if (!isValidLightStateConfiguration(new CrossingValidator(), firstState, secondState)) {
 			warningConfiguration();
 			return;
 		}
 		firstState = firstState.next();
 	}
 
-	private boolean isValidLightStateConfiguration(LightState firstState, LightState secondState) {
+	private boolean isValidLightStateConfiguration(CrossingValidator validator, LightState firstState, LightState secondState) {
 		return !LightState.UNKNOWN.equals(firstState) && LightState.RED.equals(secondState);
 	}
 	
@@ -45,7 +45,7 @@ public class FirstLightSwitchingCrossingController {
 		return secondState;
 	}
 	
-	private class CrossingValidator {
+	private static class CrossingValidator {
 		
 	}
 }

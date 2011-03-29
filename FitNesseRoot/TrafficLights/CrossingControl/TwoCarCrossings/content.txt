@@ -1,7 +1,28 @@
+!2 Valid combinations
+
 !|FirstLightSwitchingCrossingController             |
 |first light|second light|first light?|second light?|
 |green      |red         |yellow      |red          |
 |yellow     |red         |red         |red          |
 |red, yellow|red         |green       |red          |
 |red        |red         |red, yellow |red          |
-|green      |red, yellow |yellow blink|yellow blink |
+
+!2 Invalid combinations
+!|FirstLightSwitchingCrossingController               |
+|first light  |second light|first light?|second light?|
+|green        |red, yellow |yellow blink|yellow blink |
+|green        |green       |yellow blink|yellow blink |
+|green        |yellow      |yellow blink|yellow blink |
+|yellow       |red, yellow |yellow blink|yellow blink |
+|yellow       |green       |yellow blink|yellow blink |
+|yellow       |yellow      |yellow blink|yellow blink |
+|red, yellow  |red, yellow |yellow blink|yellow blink |
+|red, yellow  |green       |yellow blink|yellow blink |
+|red, yellow  |yellow      |yellow blink|yellow blink |
+|red          |red, yellow |yellow blink|yellow blink |
+|red          |green       |yellow blink|yellow blink |
+|red          |yellow      |yellow blink|yellow blink |
+|yellow blink |red         |yellow blink|yellow blink |
+|yellow blink |red, yellow |yellow blink|yellow blink |
+|yellow blink |green       |yellow blink|yellow blink |
+|yellow blinkl|yellow      |yellow blink|yellow blink |

@@ -1,0 +1,13 @@
+!1 Traffic Lights control system
+
+This suite consists of a set of tests for the traffic lights control system.
+
+----
+!contents -R2 -g -p -f -h
+
+!*< SLiM relevant stuff
+
+!define TEST_SYSTEM {slim}
+!path classes
+
+*!

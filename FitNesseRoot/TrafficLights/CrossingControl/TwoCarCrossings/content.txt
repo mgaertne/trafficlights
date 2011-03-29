@@ -4,3 +4,4 @@
 |yellow     |red         |red         |red          |
 |red, yellow|red         |green       |red          |
 |red        |red         |red, yellow |red          |
+|green      |red, yellow |yellow blink|yellow blink |

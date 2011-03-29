@@ -21,7 +21,8 @@ public class LightStateTest {
 				{ RED, RED_YELLOW },
 				{ RED_YELLOW, GREEN },
 				{ GREEN, YELLOW },
-				{ YELLOW, RED }
+				{ YELLOW, RED },
+				{ UNKNOWN, UNKNOWN }
 		});
 	}
 

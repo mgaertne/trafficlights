@@ -1,0 +1,6 @@
+!|scenario       |invalid combination|firstLight||secondLight|
+|set first light |@firstLight                                |
+|set second light|@secondLight                               |
+|execute                                                     |
+|check           |first light        |yellow blink           |
+|check           |second light       |yellow blink           |

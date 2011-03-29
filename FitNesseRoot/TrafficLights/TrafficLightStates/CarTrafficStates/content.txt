@@ -1,3 +1,6 @@
+!|import                          |
+|org.trafficlights.test.acceptance|
+
 !|Traffic Lights            |
 |previous state|next state? |
 |red           |red, yellow |

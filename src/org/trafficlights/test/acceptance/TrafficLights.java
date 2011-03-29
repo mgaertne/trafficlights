@@ -1,3 +1,4 @@
+package org.trafficlights.test.acceptance;
 
 public class TrafficLights {
 

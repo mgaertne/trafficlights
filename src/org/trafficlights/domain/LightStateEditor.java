@@ -9,6 +9,10 @@ public class LightStateEditor extends PropertyEditorSupport {
 			setValue(LightState.RED);
 			return;
 		}
-		setValue(LightState.RED_YELLOW);
+		if ("red, yellow".equals(state)) {
+			setValue(LightState.RED_YELLOW);
+			return;
+		}
+		setValue(LightState.GREEN);
 	}
 }

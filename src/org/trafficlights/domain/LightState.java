@@ -13,7 +13,7 @@ public enum LightState {
 	YELLOW("yellow") {
 		public LightState next() { return RED; }
 	},
-	UNKNOWN;
+	UNKNOWN("yellow blink");
 
 	String description;
 	

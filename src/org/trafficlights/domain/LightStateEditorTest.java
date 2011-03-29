@@ -21,7 +21,8 @@ public class LightStateEditorTest {
 				{ "red", RED },
 				{ "red, yellow", RED_YELLOW },
 				{ "green", GREEN },
-				{ "yellow", YELLOW }
+				{ "yellow", YELLOW },
+				{ "yellow blink", UNKNOWN }
 		});
 	}
 	

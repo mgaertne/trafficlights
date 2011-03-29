@@ -8,21 +8,31 @@
 |red        |red         |red, yellow |red          |
 
 !2 Invalid combinations
-!|FirstLightSwitchingCrossingController               |
-|first light  |second light|first light?|second light?|
-|green        |red, yellow |yellow blink|yellow blink |
-|green        |green       |yellow blink|yellow blink |
-|green        |yellow      |yellow blink|yellow blink |
-|yellow       |red, yellow |yellow blink|yellow blink |
-|yellow       |green       |yellow blink|yellow blink |
-|yellow       |yellow      |yellow blink|yellow blink |
-|red, yellow  |red, yellow |yellow blink|yellow blink |
-|red, yellow  |green       |yellow blink|yellow blink |
-|red, yellow  |yellow      |yellow blink|yellow blink |
-|red          |red, yellow |yellow blink|yellow blink |
-|red          |green       |yellow blink|yellow blink |
-|red          |yellow      |yellow blink|yellow blink |
-|yellow blink |red         |yellow blink|yellow blink |
-|yellow blink |red, yellow |yellow blink|yellow blink |
-|yellow blink |green       |yellow blink|yellow blink |
-|yellow blinkl|yellow      |yellow blink|yellow blink |
+
+!|scenario       |invalid combination|firstLight||secondLight|
+|set first light |@firstLight                                |
+|set second light|@secondLight                               |
+|execute                                                     |
+|check           |first light        |yellow blink           |
+|check           |second light       |yellow blink           |
+
+!|script|FirstLightSwitchingCrossingController|
+
+!|invalid combination     |
+|firstLight   |secondLight|
+|green        |red, yellow|
+|green        |green      |
+|green        |yellow     |
+|yellow       |red, yellow|
+|yellow       |green      |
+|yellow       |yellow     |
+|red, yellow  |red, yellow|
+|red, yellow  |green      |
+|red, yellow  |yellow     |
+|red          |red, yellow|
+|red          |green      |
+|red          |yellow     |
+|yellow blink |red        |
+|yellow blink |red, yellow|
+|yellow blink |green      |
+|yellow blinkl|yellow     |

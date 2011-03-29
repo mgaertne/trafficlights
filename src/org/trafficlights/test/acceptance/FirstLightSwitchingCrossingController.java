@@ -1,5 +1,6 @@
 package org.trafficlights.test.acceptance;
 
+import org.trafficlights.domain.CrossingValidator;
 import org.trafficlights.domain.LightState;
 
 public class FirstLightSwitchingCrossingController {
@@ -42,13 +43,5 @@ public class FirstLightSwitchingCrossingController {
 	
 	public LightState secondLight() {
 		return secondState;
-	}
-	
-	public class CrossingValidator {
-
-		public boolean isValidConfiguration(LightState firstState, LightState secondState) {
-			return !LightState.UNKNOWN.equals(firstState) && LightState.RED.equals(secondState);
-		}
-		
 	}
 }

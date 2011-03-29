@@ -4,7 +4,10 @@ package org.trafficlights.domain;
 public class CrossingValidator {
 
 	public boolean isValidConfiguration(LightState firstState, LightState secondState) {
-		return !LightState.UNKNOWN.equals(firstState) && LightState.RED.equals(secondState);
+		if (LightState.UNKNOWN.equals(firstState)) return false;
+		if (LightState.RED.equals(secondState)) return true;
+		if (LightState.RED.equals(firstState) && LightState.GREEN.equals(secondState)) return true;
+		return false;
 	}
 	
 }

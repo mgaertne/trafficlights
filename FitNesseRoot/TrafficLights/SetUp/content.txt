@@ -1,0 +1,2 @@
+!|import                          |
+|org.trafficlights.test.acceptance|

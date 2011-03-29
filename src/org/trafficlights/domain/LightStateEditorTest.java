@@ -37,7 +37,7 @@ public class LightStateEditorTest {
 	}
 	
 	@Test
-	public void testname() {
+	public void setAsText() {
 		editor.setAsText(stateName);
 		assertEquals(state, editor.getValue());
 		

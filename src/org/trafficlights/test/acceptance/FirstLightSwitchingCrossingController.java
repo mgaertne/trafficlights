@@ -9,7 +9,7 @@ public class FirstLightSwitchingCrossingController {
 	
 	private LightState secondState;
 
-	private CrossingValidator validator;
+	private CrossingValidator validator = new CrossingValidator();
 	
 	public void setFirstLight(LightState state) {
 		firstState = state;
@@ -24,7 +24,6 @@ public class FirstLightSwitchingCrossingController {
 	}
 
 	public void switchFirstLight() {
-		validator = new CrossingValidator();
 		if (!validator.isValidConfiguration(firstState, secondState)) {
 			warningConfiguration();
 			return;

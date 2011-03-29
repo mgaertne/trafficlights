@@ -1,0 +1,72 @@
+<project name="TrafficLights" default="all" basedir=".">
+	<description>
+    	Traffic Lights classes for Slim tests
+  	</description>
+
+	<property name="src" location="src" />
+	<property name="classes" location="classes" />
+	<property name="lib" location="lib" />
+	<property name="test.results" location="test-results" />
+	<property name="fitnesseRoot" value="FitNesseRoot" />
+
+	<path id="classpath">
+		<pathelement location="fitnesse.jar" />
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="all" depends="build" description="Run this target any time you change code. It will clean, then compile the source." />
+
+	<target name="build" depends="clean, compile, unit_test" description="clean, then compile the source" />
+
+	<target name="compile" depends="init" description="compile the source (make)">
+		<javac srcdir="${src}" destdir="${classes}" classpathref="classpath" debug="true" source="1.6" target="1.6" />
+	</target>
+
+	<target name="clean" description="delete everything in the classes directory">
+		<delete dir="${test.results}" />
+		<delete dir="${classes}" />
+		<mkdir dir="${classes}" />
+	</target>
+
+	<target name="init">
+		<mkdir dir="${classes}" />
+		<mkdir dir="${test.results}" />
+	</target>
+
+    <target name="unit_test" depends="compile" description="run the unit tests">
+		<junit forkmode="once" fork="yes" printsummary="no" haltonfailure="yes" haltonerror="yes" dir="${basedir}">
+			<classpath>
+				<path refid="classpath" />
+				<pathelement location="${classes}" />
+			</classpath>
+			<formatter type="xml" usefile="true" />
+			<formatter type="plain" usefile="false" />
+			<batchtest todir="${test.results}">
+				<fileset dir="${src}">
+					<include name="**/*Test.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+    </target>
+
+	<target name="acceptance_tests_xml" depends="compile">
+		<java jar="fitnesse.jar" failonerror="true" fork="true" output="${test.results}/fitnesse-results.xml">
+			<arg value="-c" />
+			<arg value="TrafficLights?suite&amp;format=xml" />
+			<arg value="-p" />
+			<arg value="9234" />
+		</java>
+	</target>
+
+	<target name="acceptance_tests" depends="compile">
+		<java jar="fitnesse.jar" failonerror="true" fork="true">
+			<arg value="-c" />
+			<arg value="TrafficLights?suite&amp;format=text" />
+			<arg value="-p" />
+			<arg value="9234" />
+		</java>
+	</target>
+
+</project>

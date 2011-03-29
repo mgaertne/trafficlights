@@ -10,7 +10,7 @@ public enum LightState {
 	GREEN("green") {
 		public LightState next() { return YELLOW; }
 	},
-	YELLOW {
+	YELLOW("yellow") {
 		public LightState next() { return RED; }
 	},
 	UNKNOWN;

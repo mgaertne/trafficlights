@@ -9,7 +9,10 @@ public class TrafficLights {
 	
 	public String nextState() {
 		if ("red".equals(state)) return "red, yellow";
-		return "green";
+		if ("red, yellow".equals(state)) return "green";
+		if ("green".equals(state)) return "yellow";
+		if ("yellow".equals(state)) return "red";
+		return "yellow blink";
 	}
 	
 }

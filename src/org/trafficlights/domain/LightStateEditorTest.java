@@ -22,7 +22,8 @@ public class LightStateEditorTest {
 				{ "red, yellow", RED_YELLOW },
 				{ "green", GREEN },
 				{ "yellow", YELLOW },
-				{ "yellow blink", UNKNOWN }
+				{ "yellow blink", UNKNOWN },
+				{ "invalid state", UNKNOWN }
 		});
 	}
 	

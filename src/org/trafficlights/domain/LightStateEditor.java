@@ -11,5 +11,6 @@ public class LightStateEditor extends PropertyEditorSupport {
 				return;
 			}
 		}
+		setValue(LightState.UNKNOWN);
 	}
 }

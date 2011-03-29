@@ -26,6 +26,10 @@ public class CrossingValidatorTest {
 				{YELLOW, GREEN, false},
 				{RED_YELLOW, GREEN, false},
 				{RED, GREEN, true},
+				{UNKNOWN, GREEN, false},
+				{GREEN, RED_YELLOW, false},
+				{YELLOW, RED_YELLOW, false},
+				{RED, RED_YELLOW, true},
 		});
 	}
 	

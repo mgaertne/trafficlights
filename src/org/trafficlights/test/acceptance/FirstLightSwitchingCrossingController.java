@@ -44,4 +44,8 @@ public class FirstLightSwitchingCrossingController {
 	public LightState secondLight() {
 		return secondState;
 	}
+	
+	private class CrossingValidator {
+		
+	}
 }

@@ -1,3 +1,4 @@
 !|Traffic Lights           |
 |previous state|next state?|
 |red           |red, yellow|
+|red, yellow   |green      |

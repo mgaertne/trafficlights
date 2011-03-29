@@ -15,6 +15,13 @@ public enum LightState {
 	},
 	UNKNOWN("yellow blink");
 
+	public static LightState valueFor(String stateName) {
+		for (LightState state: values()) {
+			if (state.description.equals(stateName)) return state;
+		}
+		return UNKNOWN;
+	}
+	
 	String description;
 	
 	private LightState() {

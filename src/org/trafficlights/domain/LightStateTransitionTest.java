@@ -13,7 +13,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class LightStateTest {
+public class LightStateTransitionTest {
 	
 	@Parameters
 	public static List<Object[]> data() {
@@ -29,7 +29,7 @@ public class LightStateTest {
 	private LightState previousState;
 	private LightState nextState;
 	
-	public LightStateTest(LightState previousState, LightState nextState) {
+	public LightStateTransitionTest(LightState previousState, LightState nextState) {
 		this.previousState = previousState;
 		this.nextState = nextState;
 	}

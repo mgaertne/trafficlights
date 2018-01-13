@@ -28,4 +28,4 @@
 |yellow blink |red        |
 |yellow blink |red, yellow|
 |yellow blink |green      |
-|yellow blinkl|yellow     |
+|yellow blink |yellow     |
